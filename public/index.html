@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная · Савва Кано</title>
+  <meta name="description" content="Савва Кано, junior DevOps-инженер из Санкт-Петербурга. Проекты, опыт и контакты.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <a href="index.html" aria-current="page">Главная</a>
+        <a href="projects.html">Проекты</a>
+        <a href="experience.html">Опыт работы</a>
+        <a href="contacts.html" class="nav-gap">Контакты</a>
+      </nav>
+    </aside>
+
+    <main>
+      <h1>Савва Кано</h1>
+      <p class="subtitle">Junior DevOps-инженер · Санкт-Петербург</p>
+      <p class="lead">Учусь в магистратуре СПбПУ по киберфизическим системам. До этого закончил Горный университет по автоматизации технологических процессов.</p>
+      <p class="lead">Почти два года работал инженером в автоматизации. Писал прошивки на C++ для STM32 и ESP32, собирал шкафы автоматики, настраивал электронику на объектах. Отсюда привычка думать про надёжность и про то, что система должна работать без присмотра.</p>
+      <p class="lead">Пишу бэкенд на Go и упаковываю его в Docker. Сейчас иду в DevOps. Изучаю Linux, сети, CI/CD и мониторинг, практику веду в отдельном репозитории.</p>
+
+      <h2>Главные проекты</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Трекер для футбола</h3>
+          <p>Носимый трекер на ESP32-S3 шлёт телеметрию, бэкенд на Go считает метрики, дашборд обновляется в реальном времени.</p>
+          <ul class="tags"><li>Go</li><li>PostgreSQL</li><li>Docker Compose</li></ul>
+        </article>
+        <article class="card">
+          <h3>Этот сайт</h3>
+          <p>Статика без фреймворков. Локально запускается в контейнере с nginx, публикуется через GitHub Actions.</p>
+          <ul class="tags"><li>nginx</li><li>Docker</li><li>GitHub Actions</li></ul>
+        </article>
+      </div>
+      <p><a href="projects.html">Все проекты →</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <h2>Дополнительная информация</h2>
+      <dl class="info">
+        <div>
+          <dt>Магистратура</dt>
+          <dd>СПбПУ, «Киберфизические системы», выпуск 2028</dd>
+        </div>
+        <div>
+          <dt>Бакалавриат</dt>
+          <dd>Горный университет, «Автоматизация технологических процессов и производств», 2026</dd>
+        </div>
+        <div>
+          <dt>Стек</dt>
+          <dd>C++ (STM32, ESP32), Go, Python, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Git, Docker. Изучаю Linux и CI/CD</dd>
+        </div>
+        <div>
+          <dt>Город и формат</dt>
+          <dd>Санкт-Петербург, гибрид или удалёнка</dd>
+        </div>
+      </dl>
+    </footer>
+  </div>
+</body>
+</html>
