@@ -4,51 +4,63 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Контакты · Савва Кано</title>
-  <meta name="description" content="Савва Кано, junior DevOps-инженер из Санкт-Петербурга. Проекты, опыт и контакты.">
+  <meta name="description" content="Савва Кано, junior embedded-инженер из Санкт-Петербурга. C/C++, STM32, ESP32, автоматизация.">
+  <meta name="theme-color" content="#0a0f0d">
+  <link rel="icon" href="img/avatar.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap&subset=cyrillic">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <nav>
-        <a href="index.html">Главная</a>
-        <a href="projects.html">Проекты</a>
-        <a href="experience.html">Опыт работы</a>
-        <a href="contacts.html" class="nav-gap" aria-current="page">Контакты</a>
-      </nav>
+      <div class="sidebar-inner">
+        <a class="logo" href="index.html"><img src="img/avatar.svg" alt="" width="44" height="44"><span>kano<span class="cursor">_</span></span></a>
+        <nav>
+          <a href="index.html"><span class="num">01</span>Главная</a>
+          <a href="projects.html"><span class="num">02</span>Проекты</a>
+          <a href="experience.html"><span class="num">03</span>Опыт работы</a>
+          <a href="contacts.html" class="nav-gap" aria-current="page"><span class="num">04</span>Контакты</a>
+        </nav>
+        <p class="status"><span class="dot"></span>открыт к офферам</p>
+      </div>
     </aside>
 
     <main>
+      <p class="eyebrow">// 04</p>
       <h1>Контакты</h1>
       <p class="subtitle">Быстрее всего отвечаю в Telegram.</p>
 
-      <ul class="contacts">
-        <li><span>Почта</span><a href="mailto:savvasadykov04@gmail.com">savvasadykov04@gmail.com</a></li>
-        <li><span>Telegram</span><a href="https://t.me/saaaadoooo">@saaaadoooo</a></li>
-        <li><span>GitHub</span><a href="https://github.com/Sadovod04">Sadovod04</a></li>
-      </ul>
+      <h2>Связаться</h2>
+      <div class="contacts">
+        <a class="contact reveal" href="https://t.me/saaaadoooo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M21 4 3 11l6 2 2 6 3-4 5 4z"/><path d="m9 13 8-6"/></svg><span class="label">telegram</span><span class="value">@saaaadoooo</span></a>
+        <a class="contact reveal" href="mailto:savvasadykov04@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="label">почта</span><span class="value">savvasadykov04@gmail.com</span></a>
+        <a class="contact reveal" href="https://github.com/Sadovod04"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="m14 4-4 16"/></svg><span class="label">github</span><span class="value">Sadovod04</span></a>
+      </div>
     </main>
 
     <footer class="site-footer">
       <h2>Дополнительная информация</h2>
       <dl class="info">
         <div>
-          <dt>Магистратура</dt>
-          <dd>СПбПУ, «Киберфизические системы», выпуск 2028</dd>
+          <dt>// магистратура</dt>
+          <dd>СПбПУ Петра Великого, киберфизические системы, выпуск 2028</dd>
         </div>
         <div>
-          <dt>Бакалавриат</dt>
-          <dd>Горный университет, «Автоматизация технологических процессов и производств», 2026</dd>
+          <dt>// бакалавриат</dt>
+          <dd>Горный университет, автоматизация технологических процессов и производств, 2026</dd>
         </div>
         <div>
-          <dt>Стек</dt>
-          <dd>C++ (STM32, ESP32), Go, Python, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Git, Docker. Изучаю Linux и CI/CD</dd>
+          <dt>// стек</dt>
+          <dd>C/C++, STM32, ESP32, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Go, Python, Git</dd>
         </div>
         <div>
-          <dt>Город и формат</dt>
-          <dd>Санкт-Петербург, гибрид или удалёнка</dd>
+          <dt>// формат</dt>
+          <dd>Санкт-Петербург, офис или гибрид</dd>
         </div>
       </dl>
+      <p class="copyright">© 2026 Савва Кано · nginx + GitHub Actions</p>
     </footer>
   </div>
 </body>

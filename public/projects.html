@@ -4,68 +4,98 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Проекты · Савва Кано</title>
-  <meta name="description" content="Савва Кано, junior DevOps-инженер из Санкт-Петербурга. Проекты, опыт и контакты.">
+  <meta name="description" content="Савва Кано, junior embedded-инженер из Санкт-Петербурга. C/C++, STM32, ESP32, автоматизация.">
+  <meta name="theme-color" content="#0a0f0d">
+  <link rel="icon" href="img/avatar.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap&subset=cyrillic">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <nav>
-        <a href="index.html">Главная</a>
-        <a href="projects.html" aria-current="page">Проекты</a>
-        <a href="experience.html">Опыт работы</a>
-        <a href="contacts.html" class="nav-gap">Контакты</a>
-      </nav>
+      <div class="sidebar-inner">
+        <a class="logo" href="index.html"><img src="img/avatar.svg" alt="" width="44" height="44"><span>kano<span class="cursor">_</span></span></a>
+        <nav>
+          <a href="index.html"><span class="num">01</span>Главная</a>
+          <a href="projects.html" aria-current="page"><span class="num">02</span>Проекты</a>
+          <a href="experience.html"><span class="num">03</span>Опыт работы</a>
+          <a href="contacts.html" class="nav-gap"><span class="num">04</span>Контакты</a>
+        </nav>
+        <p class="status"><span class="dot"></span>открыт к офферам</p>
+      </div>
     </aside>
 
     <main>
+      <p class="eyebrow">// 02</p>
       <h1>Проекты</h1>
-      <p class="subtitle">Сначала то, что ближе к инфраструктуре и бэкенду.</p>
+      <p class="subtitle">Сначала железо, потом бэкенд и данные.</p>
 
+      <h2>Железо</h2>
       <div class="cards">
-        <article class="card">
-          <h3>Трекер для футбола</h3>
-          <p>Платформа анализа тренировок. Трекер на ESP32-S3 с GPS и IMU шлёт данные, бэкенд на Go сливает их фильтром Калмана и считает спринты, ускорения и зоны интенсивности. Дашборд получает поток по WebSocket.</p>
-          <ul class="tags"><li>Go</li><li>PostgreSQL</li><li>WebSocket</li><li>Docker Compose</li><li>ESP32-S3</li></ul>
-          <p><a href="https://github.com/Sadovod04/treker">GitHub</a></p>
-        </article>
-        <article class="card">
-          <h3>Бот для рассылок в Telegram</h3>
-          <p>Бот рассылает сообщения по разным чатам, у каждого чата своё cron-расписание. Управление идёт командами внутри бота, данные лежат в SQLite.</p>
-          <ul class="tags"><li>Go</li><li>SQLite</li><li>cron</li></ul>
-        </article>
-        <article class="card">
-          <h3>Этот сайт</h3>
-          <p>Статический сайт в контейнере с nginx. Деплой на GitHub Pages идёт автоматически при пуше в main.</p>
-          <ul class="tags"><li>nginx</li><li>Docker</li><li>GitHub Actions</li></ul>
-        </article>
-        <article class="card">
-          <h3>DevOps-маршрут</h3>
-          <p>Мой учебный репозиторий. Курс на 44 недели, конспекты, лабы в изолированном контейнерном стенде и скрипты автопроверки.</p>
-          <ul class="tags"><li>Linux</li><li>Docker</li><li>Bash</li></ul>
-          <p><a href="https://github.com/Sadovod04/docker-junior">GitHub</a></p>
+        <article class="card featured reveal">
+          <img class="cover" src="img/cover-tracker.svg" alt="Схема футбольного поля с треком игрока" loading="lazy">
+          <div class="card-body">
+            <span class="badge">главный проект · магистерская</span>
+            <h3>Трекер для футбола на ESP32-S3</h3>
+            <p>Носимый трекер с GPS и IMU. Прошивка на C++ снимает данные с датчиков и отправляет их на сервер.</p>
+            <p>Бэкенд на Go сливает GPS и IMU фильтром Калмана и считает спринты, ускорения и зоны интенсивности. Дашборд получает поток по WebSocket.</p>
+            <ul class="tags"><li>ESP32-S3</li><li>C++</li><li>PlatformIO</li><li>GPS / IMU</li><li>Go</li><li>WebSocket</li></ul>
+            <a class="link" href="https://github.com/Sadovod04/treker">github.com/Sadovod04/treker →</a>
+          </div>
         </article>
       </div>
 
-      <h2>Другое</h2>
+      <h2>Бэкенд и инфраструктура</h2>
       <div class="cards">
-        <article class="card">
-          <h3>RPL-analiz</h3>
-          <p>Модель ранжирует воспитанников российских академий по шансу закрепиться в РПЛ. Свой сбор данных, PostgreSQL в Docker, калибровка вероятностей.</p>
-          <ul class="tags"><li>Python</li><li>PostgreSQL</li><li>scikit-learn</li></ul>
-          <p><a href="https://github.com/Sadovod04/RPL-analiz">GitHub</a></p>
+        <article class="card reveal">
+          <img class="cover" src="img/cover-bot.svg" alt="Сообщения бота по расписанию" loading="lazy">
+          <div class="card-body">
+            <h3>Бот для рассылок в Telegram</h3>
+            <p>Рассылает сообщения по разным чатам, у каждого чата своё cron-расписание. Управление командами внутри бота, данные в SQLite.</p>
+            <ul class="tags"><li>Go</li><li>SQLite</li><li>cron</li></ul>
+          </div>
         </article>
-        <article class="card">
-          <h3>California Housing</h3>
-          <p>Полный цикл регрессии от EDA до сервиса на FastAPI. На тесте R² 0.847, отдельно разобрано, где модель ошибается.</p>
-          <ul class="tags"><li>Python</li><li>scikit-learn</li><li>FastAPI</li></ul>
-          <p><a href="https://github.com/Sadovod04/california-housing-regression">GitHub</a></p>
+        <article class="card reveal">
+          <img class="cover" src="img/cover-site.svg" alt="Окно браузера с сайтом" loading="lazy">
+          <div class="card-body">
+            <h3>Этот сайт</h3>
+            <p>Статика без фреймворков в контейнере с nginx. При пуше GitHub Actions собирает образ, проверяет его и выкладывает сайт.</p>
+            <ul class="tags"><li>nginx</li><li>Docker</li><li>GitHub Actions</li></ul>
+            <a class="link" href="https://github.com/Sadovod04/Sadovod04.github.io">GitHub →</a>
+          </div>
         </article>
-        <article class="card">
-          <h3>OSINT self-check</h3>
-          <p>Скрипт ищет мои аккаунты и упоминания в открытых источниках и собирает чек-лист, где и что удалить.</p>
-          <ul class="tags"><li>Python</li></ul>
-          <p><a href="https://github.com/Sadovod04/osint">GitHub</a></p>
+      </div>
+
+      <h2>Данные и ML</h2>
+      <div class="cards">
+        <article class="card reveal">
+          <img class="cover" src="img/cover-rpl.svg" alt="Рейтинг кандидатов" loading="lazy">
+          <div class="card-body">
+            <h3>RPL-analiz</h3>
+            <p>Модель ранжирует воспитанников российских академий по шансу закрепиться в РПЛ. Свой сбор данных, PostgreSQL в Docker, калибровка вероятностей.</p>
+            <ul class="tags"><li>Python</li><li>PostgreSQL</li><li>scikit-learn</li></ul>
+            <a class="link" href="https://github.com/Sadovod04/RPL-analiz">GitHub →</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img class="cover" src="img/cover-housing.svg" alt="Точки и линия регрессии" loading="lazy">
+          <div class="card-body">
+            <h3>California Housing</h3>
+            <p>Полный цикл регрессии от EDA до сервиса на FastAPI. На тесте R² 0.847, отдельно разобрано, где модель ошибается.</p>
+            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>FastAPI</li></ul>
+            <a class="link" href="https://github.com/Sadovod04/california-housing-regression">GitHub →</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <img class="cover" src="img/cover-osint.svg" alt="Граф связей под лупой" loading="lazy">
+          <div class="card-body">
+            <h3>OSINT self-check</h3>
+            <p>Скрипт ищет мои аккаунты и упоминания в открытых источниках и собирает чек-лист, где и что удалить.</p>
+            <ul class="tags"><li>Python</li><li>OSINT</li></ul>
+            <a class="link" href="https://github.com/Sadovod04/osint">GitHub →</a>
+          </div>
         </article>
       </div>
     </main>
@@ -74,22 +104,23 @@
       <h2>Дополнительная информация</h2>
       <dl class="info">
         <div>
-          <dt>Магистратура</dt>
-          <dd>СПбПУ, «Киберфизические системы», выпуск 2028</dd>
+          <dt>// магистратура</dt>
+          <dd>СПбПУ Петра Великого, киберфизические системы, выпуск 2028</dd>
         </div>
         <div>
-          <dt>Бакалавриат</dt>
-          <dd>Горный университет, «Автоматизация технологических процессов и производств», 2026</dd>
+          <dt>// бакалавриат</dt>
+          <dd>Горный университет, автоматизация технологических процессов и производств, 2026</dd>
         </div>
         <div>
-          <dt>Стек</dt>
-          <dd>C++ (STM32, ESP32), Go, Python, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Git, Docker. Изучаю Linux и CI/CD</dd>
+          <dt>// стек</dt>
+          <dd>C/C++, STM32, ESP32, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Go, Python, Git</dd>
         </div>
         <div>
-          <dt>Город и формат</dt>
-          <dd>Санкт-Петербург, гибрид или удалёнка</dd>
+          <dt>// формат</dt>
+          <dd>Санкт-Петербург, офис или гибрид</dd>
         </div>
       </dl>
+      <p class="copyright">© 2026 Савва Кано · nginx + GitHub Actions</p>
     </footer>
   </div>
 </body>

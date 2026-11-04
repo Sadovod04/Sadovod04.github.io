@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" preserveAspectRatio="none" role="img" aria-label="Осциллограмма">
+  <style>
+    .g{stroke:#1d2a26;stroke-width:1}
+    .w{fill:none;stroke:#3ddc97;stroke-width:2.5;stroke-dasharray:1600;animation:draw 4s linear infinite}
+    .s{fill:none;stroke:#ffb547;stroke-width:2;opacity:.85;stroke-dasharray:1600;animation:draw 5s linear infinite}
+    .t{font:11px monospace;fill:#6f8a7f}
+    @keyframes draw{from{stroke-dashoffset:1600}to{stroke-dashoffset:0}}
+    @media (prefers-reduced-motion: reduce){.w,.s{animation:none;stroke-dasharray:none}}
+  </style>
+  <g class="g">
+    <line x1="0" y1="20" x2="800" y2="20"/><line x1="0" y1="60" x2="800" y2="60"/><line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="100" y1="0" x2="100" y2="120"/><line x1="200" y1="0" x2="200" y2="120"/><line x1="300" y1="0" x2="300" y2="120"/><line x1="400" y1="0" x2="400" y2="120"/><line x1="500" y1="0" x2="500" y2="120"/><line x1="600" y1="0" x2="600" y2="120"/><line x1="700" y1="0" x2="700" y2="120"/>
+  </g>
+  <path class="w" d="M0 90 H50 V30 H100 V90 H150 V30 H200 V90 H250 V30 H300 V90 H350 V30 H400 V90 H450 V30 H500 V90 H550 V30 H600 V90 H650 V30 H700 V90 H750 V30 H800"/>
+  <path class="s" d="M0 60 C 33 20, 67 20, 100 60 S 167 100, 200 60 S 267 20, 300 60 S 367 100, 400 60 S 467 20, 500 60 S 567 100, 600 60 S 667 20, 700 60 S 767 100, 800 60"/>
+  <text class="t" x="8" y="14">CH1 3.3V  PWM 1kHz</text>
+  <text class="t" x="640" y="114">CH2 UART · 115200</text>
+</svg>

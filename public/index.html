@@ -4,63 +4,93 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная · Савва Кано</title>
-  <meta name="description" content="Савва Кано, junior DevOps-инженер из Санкт-Петербурга. Проекты, опыт и контакты.">
+  <meta name="description" content="Савва Кано, junior embedded-инженер из Санкт-Петербурга. C/C++, STM32, ESP32, автоматизация.">
+  <meta name="theme-color" content="#0a0f0d">
+  <link rel="icon" href="img/avatar.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap&subset=cyrillic">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <nav>
-        <a href="index.html" aria-current="page">Главная</a>
-        <a href="projects.html">Проекты</a>
-        <a href="experience.html">Опыт работы</a>
-        <a href="contacts.html" class="nav-gap">Контакты</a>
-      </nav>
+      <div class="sidebar-inner">
+        <a class="logo" href="index.html"><img src="img/avatar.svg" alt="" width="44" height="44"><span>kano<span class="cursor">_</span></span></a>
+        <nav>
+          <a href="index.html" aria-current="page"><span class="num">01</span>Главная</a>
+          <a href="projects.html"><span class="num">02</span>Проекты</a>
+          <a href="experience.html"><span class="num">03</span>Опыт работы</a>
+          <a href="contacts.html" class="nav-gap"><span class="num">04</span>Контакты</a>
+        </nav>
+        <p class="status"><span class="dot"></span>открыт к офферам</p>
+      </div>
     </aside>
 
     <main>
-      <h1>Савва Кано</h1>
-      <p class="subtitle">Junior DevOps-инженер · Санкт-Петербург</p>
-      <p class="lead">Учусь в магистратуре СПбПУ по киберфизическим системам. До этого закончил Горный университет по автоматизации технологических процессов.</p>
-      <p class="lead">Почти два года работал инженером в автоматизации. Писал прошивки на C++ для STM32 и ESP32, собирал шкафы автоматики, настраивал электронику на объектах. Отсюда привычка думать про надёжность и про то, что система должна работать без присмотра.</p>
-      <p class="lead">Пишу бэкенд на Go и упаковываю его в Docker. Сейчас иду в DevOps. Изучаю Linux, сети, CI/CD и мониторинг, практику веду в отдельном репозитории.</p>
+      <section class="hero">
+        <div class="reveal">
+          <p class="eyebrow">// junior embedded-инженер</p>
+          <h1>Савва Кано<span class="accent">_</span></h1>
+          <p class="subtitle">C/C++ · STM32 · ESP32 · Санкт-Петербург</p>
+          <p class="lead">Полгода писал на C++ под STM32 и ESP32 в КОНВЕЛС Автоматизация. Собирал шкафы автоматики и паял платы. До этого больше года настраивал автоматику на объектах.</p>
+          <p class="lead">Учусь в магистратуре СПбПУ по киберфизическим системам. Сейчас делаю свой трекер для футбола на ESP32-S3 и глубже разбираю C++ для embedded.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="projects.html">Проекты →</a>
+            <a class="btn" href="https://t.me/saaaadoooo">Написать в Telegram</a>
+          </div>
+        </div>
+        <div class="hero-art reveal">
+          <img src="img/hero-board.svg" alt="Иллюстрация печатной платы с микроконтроллером STM32 и модулем ESP32" width="520" height="400">
+        </div>
+      </section>
 
-      <h2>Главные проекты</h2>
+      <div class="scope reveal"><img src="img/scope.svg" alt="" aria-hidden="true"></div>
+
+      <div class="stats">
+        <div class="stat reveal"><b>2 года</b><span>инженерного опыта в автоматизации и embedded</span></div>
+        <div class="stat reveal"><b>STM32 · ESP32</b><span>прошивал руками на работе и в своих проектах</span></div>
+        <div class="stat reveal"><b>5</b><span>открытых проектов на GitHub</span></div>
+      </div>
+
+      <h2>Главный проект</h2>
       <div class="cards">
-        <article class="card">
-          <h3>Трекер для футбола</h3>
-          <p>Носимый трекер на ESP32-S3 шлёт телеметрию, бэкенд на Go считает метрики, дашборд обновляется в реальном времени.</p>
-          <ul class="tags"><li>Go</li><li>PostgreSQL</li><li>Docker Compose</li></ul>
-        </article>
-        <article class="card">
-          <h3>Этот сайт</h3>
-          <p>Статика без фреймворков. Локально запускается в контейнере с nginx, публикуется через GitHub Actions.</p>
-          <ul class="tags"><li>nginx</li><li>Docker</li><li>GitHub Actions</li></ul>
+        <article class="card featured reveal">
+          <img class="cover" src="img/cover-tracker.svg" alt="Схема футбольного поля с треком игрока" loading="lazy">
+          <div class="card-body">
+            <span class="badge">главный проект · магистерская</span>
+            <h3>Трекер для футбола на ESP32-S3</h3>
+            <p>Носимый трекер с GPS и IMU. Прошивка на C++ снимает данные с датчиков и отправляет их на сервер.</p>
+            <p>Бэкенд на Go сливает GPS и IMU фильтром Калмана и считает спринты, ускорения и зоны интенсивности. Дашборд получает поток по WebSocket.</p>
+            <ul class="tags"><li>ESP32-S3</li><li>C++</li><li>PlatformIO</li><li>GPS / IMU</li><li>Go</li><li>WebSocket</li></ul>
+            <a class="link" href="https://github.com/Sadovod04/treker">github.com/Sadovod04/treker →</a>
+          </div>
         </article>
       </div>
-      <p><a href="projects.html">Все проекты →</a></p>
+      <p><a class="btn" href="projects.html">Все проекты →</a></p>
     </main>
 
     <footer class="site-footer">
       <h2>Дополнительная информация</h2>
       <dl class="info">
         <div>
-          <dt>Магистратура</dt>
-          <dd>СПбПУ, «Киберфизические системы», выпуск 2028</dd>
+          <dt>// магистратура</dt>
+          <dd>СПбПУ Петра Великого, киберфизические системы, выпуск 2028</dd>
         </div>
         <div>
-          <dt>Бакалавриат</dt>
-          <dd>Горный университет, «Автоматизация технологических процессов и производств», 2026</dd>
+          <dt>// бакалавриат</dt>
+          <dd>Горный университет, автоматизация технологических процессов и производств, 2026</dd>
         </div>
         <div>
-          <dt>Стек</dt>
-          <dd>C++ (STM32, ESP32), Go, Python, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Git, Docker. Изучаю Linux и CI/CD</dd>
+          <dt>// стек</dt>
+          <dd>C/C++, STM32, ESP32, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Go, Python, Git</dd>
         </div>
         <div>
-          <dt>Город и формат</dt>
-          <dd>Санкт-Петербург, гибрид или удалёнка</dd>
+          <dt>// формат</dt>
+          <dd>Санкт-Петербург, офис или гибрид</dd>
         </div>
       </dl>
+      <p class="copyright">© 2026 Савва Кано · nginx + GitHub Actions</p>
     </footer>
   </div>
 </body>

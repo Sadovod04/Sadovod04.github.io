@@ -4,43 +4,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Опыт работы · Савва Кано</title>
-  <meta name="description" content="Савва Кано, junior DevOps-инженер из Санкт-Петербурга. Проекты, опыт и контакты.">
+  <meta name="description" content="Савва Кано, junior embedded-инженер из Санкт-Петербурга. C/C++, STM32, ESP32, автоматизация.">
+  <meta name="theme-color" content="#0a0f0d">
+  <link rel="icon" href="img/avatar.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap&subset=cyrillic">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="layout">
     <aside class="sidebar">
-      <nav>
-        <a href="index.html">Главная</a>
-        <a href="projects.html">Проекты</a>
-        <a href="experience.html" aria-current="page">Опыт работы</a>
-        <a href="contacts.html" class="nav-gap">Контакты</a>
-      </nav>
+      <div class="sidebar-inner">
+        <a class="logo" href="index.html"><img src="img/avatar.svg" alt="" width="44" height="44"><span>kano<span class="cursor">_</span></span></a>
+        <nav>
+          <a href="index.html"><span class="num">01</span>Главная</a>
+          <a href="projects.html"><span class="num">02</span>Проекты</a>
+          <a href="experience.html" aria-current="page"><span class="num">03</span>Опыт работы</a>
+          <a href="contacts.html" class="nav-gap"><span class="num">04</span>Контакты</a>
+        </nav>
+        <p class="status"><span class="dot"></span>открыт к офферам</p>
+      </div>
     </aside>
 
     <main>
+      <p class="eyebrow">// 03</p>
       <h1>Опыт работы</h1>
       <p class="subtitle">От новых к старым.</p>
 
+      <h2>Где работал</h2>
       <ol class="timeline">
-        <li>
-          <p class="period">Январь 2026 — июнь 2026</p>
-          <h3>Инженер-программист, КОНВЕЛС Автоматизация</h3>
-          <p>Писал ПО на C++ для плат STM32 и ESP32. Паял и собирал платы.</p>
-          <p>Собирал шкафы автоматики.</p>
-          <p>Готовил на Python базу данных для машинного зрения.</p>
-          <p>Моделировал в MATLAB/Simulink.</p>
+        <li class="reveal">
+          <div class="job">
+            <p class="period">январь 2026 — июнь 2026</p>
+            <h3>Инженер-программист, КОНВЕЛС Автоматизация</h3>
+            <ul>
+              <li>Писал ПО на C++ для плат STM32 и ESP32.</li>
+              <li>Паял и собирал платы.</li>
+              <li>Собирал шкафы автоматики.</li>
+              <li>Готовил на Python базу данных для машинного зрения.</li>
+              <li>Моделировал в MATLAB/Simulink.</li>
+            </ul>
+            <ul class="tags"><li>C++</li><li>STM32</li><li>ESP32</li><li>пайка</li><li>Simulink</li></ul>
+          </div>
         </li>
-        <li>
-          <p class="period">Июль 2025 — сентябрь 2025</p>
-          <h3>Стажёр Data Science, НПО РИВС</h3>
-          <p>Делал модель классификации на Python.</p>
+        <li class="reveal">
+          <div class="job">
+            <p class="period">июль 2025 — сентябрь 2025</p>
+            <h3>Стажёр Data Science, НПО РИВС</h3>
+            <ul>
+              <li>Делал модель классификации на Python.</li>
+            </ul>
+            <ul class="tags"><li>Python</li><li>ML</li></ul>
+          </div>
         </li>
-        <li>
-          <p class="period">Февраль 2023 — апрель 2024</p>
-          <h3>Инженер по автоматизации, ГК РАУС</h3>
-          <p>Устанавливал секционные ворота и настраивал их электронику, фотоэлементы и концевики.</p>
-          <p>Составлял технические задания по объектам заказчиков.</p>
+        <li class="reveal">
+          <div class="job">
+            <p class="period">февраль 2023 — апрель 2024</p>
+            <h3>Инженер по автоматизации, ГК РАУС</h3>
+            <ul>
+              <li>Устанавливал секционные ворота и настраивал их электронику, фотоэлементы и концевики.</li>
+              <li>Составлял технические задания по объектам заказчиков.</li>
+            </ul>
+            <ul class="tags"><li>автоматика</li><li>монтаж</li><li>ТЗ</li></ul>
+          </div>
         </li>
       </ol>
     </main>
@@ -49,22 +76,23 @@
       <h2>Дополнительная информация</h2>
       <dl class="info">
         <div>
-          <dt>Магистратура</dt>
-          <dd>СПбПУ, «Киберфизические системы», выпуск 2028</dd>
+          <dt>// магистратура</dt>
+          <dd>СПбПУ Петра Великого, киберфизические системы, выпуск 2028</dd>
         </div>
         <div>
-          <dt>Бакалавриат</dt>
-          <dd>Горный университет, «Автоматизация технологических процессов и производств», 2026</dd>
+          <dt>// бакалавриат</dt>
+          <dd>Горный университет, автоматизация технологических процессов и производств, 2026</dd>
         </div>
         <div>
-          <dt>Стек</dt>
-          <dd>C++ (STM32, ESP32), Go, Python, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Git, Docker. Изучаю Linux и CI/CD</dd>
+          <dt>// стек</dt>
+          <dd>C/C++, STM32, ESP32, MATLAB/Simulink, CODESYS, Modbus, OPC, MasterSCADA, Go, Python, Git</dd>
         </div>
         <div>
-          <dt>Город и формат</dt>
-          <dd>Санкт-Петербург, гибрид или удалёнка</dd>
+          <dt>// формат</dt>
+          <dd>Санкт-Петербург, офис или гибрид</dd>
         </div>
       </dl>
+      <p class="copyright">© 2026 Савва Кано · nginx + GitHub Actions</p>
     </footer>
   </div>
 </body>
