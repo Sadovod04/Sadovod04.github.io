@@ -244,7 +244,7 @@ h3 {
 
 .actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 12px;
   margin-top: 28px;
 }
@@ -665,7 +665,40 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .actions {
+    gap: 8px;
+  }
+
+  .actions .btn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
   .site-footer {
     padding: 24px 16px 32px;
   }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.skills li {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.skills li:first-child {
+  border-color: var(--led);
+  color: var(--led);
 }
